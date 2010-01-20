@@ -1,0 +1,36 @@
+<div id="page">
+<div id="header_top">
+	<p><%= link_to "www.rogerionascimento.com", root_path %></p>
+</div>
+<div id="header">
+	<h1><%= link_to "Rog&eacute;rio Nascimento", root_path %></h1>
+	<div id="header_rss">
+		<%= link_to("<img alt='Rog&eacute;rio Nascimento RSS' src='/images/button_rss.png'/>", '/posts.atom') %>
+	</div>
+	<div id="header_twitter">
+		<a title="Twitter" href="http://www.twitter.com/rnasc/">
+			<img alt="Rog&eacute;rio Nascimento Twitter" src="/images/button_twitter.png"/>
+		</a>
+	</div>
+</div>
+<div id="menu">
+	<ul>
+		<li><a class="select" href="/"><span>Blog</span></a></li>
+		<li>|</li>
+		<li><a href="javascript:inativo();"><span>Curr&iacute;culo</span></a></li>
+		<li>|</li>
+		<li><a href="javascript:inativo();"><span>Hobbies</span></a></li>
+		<li>|</li>
+		<li><a href="javascript:inativo();"><span>Contato</span></a></li>
+		<li>|</li>
+		<li><a href="javascript:inativo();"><span>Sobre o Site...</span></a></li>
+	</ul>
+	<div id="main_search">
+		<form id="searchform_top" action="javascript:inativo();" method="get">
+		<div>
+			<input id="searchform_top_text" type="text" onclick="this.value='';" name="s" value="Type your search here..."/>
+			<input id="gosearch" type="image" src="/images/button_go.gif"/>
+		</div>
+		</form>
+	</div>
+</div>

@@ -1,0 +1,3 @@
+<%=
+sorted_posts = @posts.sort{ |a,b| b.id <=> a.id }
+render :partial => 'post', :collection => sorted_posts %>

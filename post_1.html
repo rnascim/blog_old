@@ -1,0 +1,442 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <title>Rog&eacute;rio on Tech :: Rails, SAP and other technology stuff</title>
+  <link rel="stylesheet" href="public/stylesheets/scaffold_fixo.css" type="text/css" media="screen" title="no title" charset="utf-8">
+  <script type="text/javascript" charset="utf-8">
+function inativo(){
+	s  = "© 2010 - Rogério Nascimento\n";
+	s += "Todos direitos reservados\n\n";
+	s += "Este recurso ainda não foi implementado.\n";
+	s += "Volte em alguns dias, pois com o uso de Ruby on Rails\n";
+	s += "tudo estará pronto de forma muito ágil.\n\n";
+	s += "Para entrar em contato:\n";
+	s += "rnascim@gmail.com";
+	alert(s);
+}
+  </script>
+</head>
+<body>
+<div id="page">
+<div id="header_top">
+	<p><a href="http://www.rogerionascimento.com">www.rogerionascimento.com</a></p>
+</div>
+<div id="header">
+	<h1><a href="http://www.rogerionascimento.com">Rog&eacute;rio Nascimento</a></h1>
+	<div id="header_rss">
+		<a title="Rss" href="javascript:inativo();">
+			<img alt="Rog&eacute;rio Nascimento RSS" src="public/images/button_rss.png"/>
+		</a>
+	</div>
+	<div id="header_twitter">
+		<a title="Twitter" href="http://www.twitter.com/rnasc/">
+			<img alt="Rog&eacute;rio Nascimento Twitter" src="public/images/button_twitter.png"/>
+		</a>
+	</div>
+</div>
+<div id="menu">
+	<ul>
+		<li><a class="select" href="/"><span>Blog</span></a></li>
+		<li>|</li>
+		<li><a href="javascript:inativo();"><span>Curr&iacute;culo</span></a></li>
+		<li>|</li>
+		<li><a href="javascript:inativo();"><span>Hobbies</span></a></li>
+		<li>|</li>
+		<li><a href="javascript:inativo();"><span>Contato</span></a></li>
+		<li>|</li>
+		<li><a href="javascript:inativo();"><span>Sobre...</span></a></li>
+	</ul>
+	<div id="main_search">
+		<form id="searchform_top" action="javascript:inativo();" method="get">
+		<div>
+			<input id="searchform_top_text" type="text" onclick="this.value='';" name="s" value="Type your search here..."/>
+			<input id="gosearch" type="image" src="public/images/button_go.gif"/>
+		</div>
+		</form>
+	</div>
+</div>
+<div id="body"> 
+	<div id="body_top">
+		<div id="body_left">
+			<div id="body_left_content">
+				<div id="content" class="narrowcolumn">
+					<div id="post-1" class="post">
+						<div class="post-top">
+							<div class="post-title">
+								<h2>[SAP] Como criar uma FIELD-EXIT</h2>
+								<h4>0</h4>
+							</div>
+						</div>
+						<div class="entry">
+							<h3>Descrição de uma FIELD EXIT</h3>
+							<p>
+								Quando há necessidade de consistências adicionais para um 
+								determinado campo na tela, o SAP disponibiliza o recurso de 
+								<strong>FIELD EXIT</strong>. Trata-se de uma pequena rotina em ABAP que será 
+								executada e que pode ter lógica, por exemplo, de validação do conteúdo.
+							</p>
+							<p>
+								É recomendado cuidado no uso deste recurso pois:
+								<ul>
+									<li>Não é debugável</li>
+									<li>Só é interceptado por telas (alguns BAPIs não passam pela <strong>FIELD EXIT</strong>).</li>
+								</ul>
+							</p>
+							<h3>Criação de uma <strong>FIELD EXIT</strong></h3>
+							<p>
+								<em><strong>Observação</strong>: Todo este procedimento deve ser feito em 
+								ambiente de customização, para somente depois ser transportado para 
+								os demais ambientes.</em>
+							</p>
+							<p>
+								O primeiro passo para criação da FIELD EXIT é obter detalhes técnicos 
+								da tela e do campo em questão. No exemplo abaixo, é apresentada a criação 
+								de uma FIELD EXIT para o campo "Local de Negócios" na tela da transação FB60.
+								Uma vez posicionado o cursor sobre o campo "Local de Negócio" 
+								(ou Business Place em inglês), pressione F1
+							</p>
+							<div id="img_footer">
+								<img title="Tela da transação FB60" src="public/images/post_1_img_1.png">
+								<p>Tela da transação FB60</p>
+							</div>
+							<p>
+								Será então exibita a tela de HELP para o campo, conforme abaixo:
+							</p>
+							<div id="img_footer">
+								<img title="Tela de Help para o campo selecionado" src="public/images/post_1_img_2.png">
+								<p>Tela de Help para o campo selecionado</p>
+							</div>
+							<p>
+								Clique sobre o botão "Informações técnicas para obter detalhes 
+								técnicos sobre a tela e o campo. 
+								Será exibida uma tela com as seguintes informações:
+							</p>
+							<div id="img_footer">
+								<img title="Informações técnicas do campo selecionado" src="public/images/post_1_img_3.png">
+								<p>Informações técnicas do campo selecionado</p>
+							</div>
+							<p>
+								Esta tela informa dados técnicos necessários para
+								a criação da FIELD EXIT. Anote os seguintes dados:
+							</p>
+							<ul>
+								<li>Nome do Programa da Tela: <strong>SAPLFDCB</strong></li>
+								<li>Número da Tela: <strong>0010</strong></li>
+								<li>Nome do Campo: <strong>BUPLA</strong></li>
+								<li>Nome do Programa de Tela para Batch Input: <strong>SAPMF05A</strong></li>
+								<li>Número da Tela para Batch Input: <strong>1100</strong></li>
+							</ul>
+							<p>
+								Entre na transação <strong>SE38</strong> (criação, alteração e execução de programas) 
+								e execute o programa <strong>RSMODPRF</strong>, conforme tela abaixo:
+							</p>
+							<div id="img_footer">
+								<img title="Transação SE38: execução de programas ABAP" src="public/images/post_1_img_4.png">
+								<p>Transação SE38: execução de programas ABAP</p>
+							</div>
+							<p>
+								Após executar o programa será exibida a tela abaixo:
+							</p>
+							<div id="img_footer">
+								<img title="Programa RSMODRF: Seleção de campos" src="public/images/post_1_img_5.png">
+								<p>Programa RSMODRF: Seleção de campos</p>
+							</div>
+							<p>
+								Clique novamente em Executar. Será exibida uma lista das <strong>FIELD EXIT</strong>s 
+								já existentes na instalação. Clique em "Exit campo --> Criar"
+							</p>
+							<div id="img_footer">
+								<img title="Criação de nova FIELD EXIT" src="public/images/post_1_img_6.png">
+								<p>Criação de nova FIELD EXIT</p>
+							</div>
+							<p>
+								Será solicitado o elemento de dados que deve passar pela EXIT. 
+								Preencha o nome técnido do campo. No nosso exemplo, com o conteúdo BUPLA.
+							</p>
+							<div id="img_footer">
+								<img title="Nome do campo" src="public/images/post_1_img_7.png">
+								<p>Nome do campo</p>
+							</div>
+							<p>
+								Será proposto automaticamente o nome FIELD_EXIT_BUPA. Clique em "Criar"
+							</p>
+							<div id="img_footer">
+								<img title="Criação do Módulo de Função" src="public/images/post_1_img_8.png">
+								<p>Criação do Módulo de Função</p>
+							</div>
+							<p>
+								Serão solicitados os seguintes dados:
+							</p>
+							<ul>
+								<li>Módulo de função: <strong>FIELD_EXIT_BUPLA</strong></li>
+								<li>Grupo de funções: <strong>ZBAL_ATRIB</strong></li>
+								<li>Texto breve: <strong>Field Exit - Local de Negócios</strong></li>
+							</ul>
+							<div id="img_footer">
+								<img title="Preenchimento dos detalhes para o Módulo de Função" src="public/images/post_1_img_9.png">
+								<p>Preenchimento dos detalhes para o Módulo de Função</p>
+							</div>
+							<p>
+								Ao clicar em gravar, será exibida a tela de criação de funções 
+								(Function Builder), onde será implementada a lógica da <strong>FIELD EXIT</strong>. 
+							</p>
+							<div id="img_footer">
+								<img title="Campos recebidos pelo Módulo de Função (sempre INPUT)" src="public/images/post_1_img_10.png">
+								<p>Campos recebidos pelo Módulo de Função (sempre INPUT)</p>
+							</div>
+							<p>
+								Clique na aba "Texto fonte", para que seja exibida a tela de edição do código. 
+								Digite então a lógica desejada.
+							</p>
+							<p>
+								No exemplo abaixo, caso o campo em questão (BUPLA) tenha valor inicial, 
+								ou seja, não esteja preenchido, será apresentada a mensagem de erro 398 
+								(e398) que utilizará uma mensagem (que por enquanto está descrita 
+								como "xxxx" e um símbolo de nome 'obr' (que encontra-se entre parenteses).
+								Veja abaixo a imagem da tela até este momento:
+							</p>
+							<div id="img_footer">
+								<img title="Tela de código ABAP" src="public/images/post_1_img_11.png">
+								<p>Tela de código ABAP</p>
+							</div>
+							<p>
+								Dê um duplo clique sobre o símbolo 'obr', para que seja solicitado 
+								o cadastramento da mensagem. Será solicitado o salvamento da 
+								função, conforme abaixo:
+							</p>
+							<div id="img_footer">
+								<img title="Gravando o Módulo de Função" src="public/images/post_1_img_12.png">
+								<p>Gravando o Módulo de Função</p>
+							</div>
+							<p>
+								Clique em "Sim" para que seja exibida a tela com o 
+								cadastramento do símbolo. Digite então o texto desejado, 
+								conforme o exemplo abaixo:
+							</p>
+							<div id="img_footer">
+								<img title="Cadastro da mensagem" src="public/images/post_1_img_13.png">
+								<p>Cadastro da mensagem</p>
+							</div>
+							<p>
+								Após isso, clique no menu "Ir para --> Tradução", 
+								para iniciar a tradução do símbulo 'obr' para outras líguas:
+							</p>
+							<div id="img_footer">
+								<img title="Menu: Acessando o cadastro de mensagens em outras línguas" src="public/images/post_1_img_14.png">
+								<p>Menu: Acessando o cadastro de mensagens em outras línguas</p>
+							</div>
+							<p>
+								Será então solicitada a lingua para qual se deseja 
+								traduzir o símbulo. No exemplo abaixo foi selecionado inglês.
+							</p>
+							<div id="img_footer">
+								<img title="Selecionando a língua desejada" src="public/images/post_1_img_15.png">
+								<p>Selecionando a língua desejada</p>
+							</div>
+							<p>
+								Observação: é recomendável que todos os símbolos sejam 
+								descrito pelo menos em Português (por tratar-se da língua local) e em Inglês.
+								Na nova tela, digite a descrição para o símbolo 'obr' na língua inglesa:
+							</p>
+							<div id="img_footer">
+								<img title="Digitação da mensagem em língua inglesa" src="public/images/post_1_img_16.png">
+								<p>Digitação da mensagem em língua inglesa</p>
+							</div>
+							<p>
+								Após isso, clique em "salvar" e duas vezes em "voltar" 
+								(uma vez na tela de tradução e outra na tela de cadastro da mensagem em português)
+							</p>
+							<p>
+								No retorno a tela onde encontra-se o código fonte da <strong>FIELD EXIT</strong>, 
+								o texto 'xxxx' já foi substituído pela mensagem cadastrada para o 
+								símbolo 'obr' na língua de login atual, conforme exemplo abaixo:
+							</p>
+							<div id="img_footer">
+								<img title="Retornando ao editor de ABAP" src="public/images/post_1_img_17.png">
+								<p>Retornando ao editor de ABAP</p>
+							</div>
+							<p>
+								Ative o programa, pressionando as teclas CTRL+F3.
+								Será apresentada uma caixa de diálogo com as funções ativas, conforme abaixo:
+							</p>
+							<div id="img_footer">
+								<img title="Ativação de componentes ABAP" src="public/images/post_1_img_18.png">
+								<p>Ativação de componentes ABAP</p>
+							</div>
+							<p>
+								Clique em "OK" e aguarde a compilação do código. 
+								Ao término da compilação, será exibida a mensagem 
+								"Objeto(s) ativado(s)" no rodapé da página.
+							</p>
+							<p>
+								Clique no botão "Sair" por duas vezes. 
+								Será apresentada a tela solicitando novamente o elemento de 
+								dados a ser visualizado. Dê um "ESC" ou clique no botão de cancelar 
+								para que a lista de FIELD EXITs seja atualizada, conforme abaixo:
+							</p>
+							<div id="img_footer">
+								<img title="Retornando a lista de FIELD EXITs" src="public/images/post_1_img_19.png">
+								<p>Retornando a lista de FIELD EXITs</p>
+							</div>
+							<p>
+								Note que o elemento de dados "BUPLA" agora faz parte da lista de
+								<strong>FIELD EXIT</strong>s. Note também que esta <strong>FIELD EXIT</strong> 
+								ainda não está ativa, sendo apresentado o status "INATIVO"
+								(A ativação feita logo acima foi da função FIELD_EXIT_BUPLA, 
+								e não da intervenção do SAP sobre o campo)
+							</p>
+							<p>
+								Note também que na coluna "Programa" é apresentado o texto "GLOBAL". 
+								Isso significa que esta <strong>FIELD EXIT</strong>, caso ativada, 
+								terá ação sobre todas as ocorrências do campo BUPLA.
+								Em nosso exemplo, queremos ativar esta <strong>FIELD EXIT</strong> 
+								apenas para a transação FB60. Para tanto devemos atribuir um programa 
+								e tela.
+							</p>
+							<p>
+								Selecione o elemento de dados "BUPLA" e clique no botão "Atribuir prog/tela".
+								A seguinte tela será exibida, onde deve ser preenchido o nome do programa 
+								e o número da tela, obtidos no primeiro passo deste tutorial.
+							</p>
+							<div id="img_footer">
+								<img title="Nome do programa e número da tela" src="public/images/post_1_img_20.png">
+								<p>Nome do programa e número da tela</p>
+							</div>
+							<p>
+								Clique no botão "Gravar".
+							</p>
+							<p>
+								Caso seja solicitado, informe novamente a request a que esta configuração deve ser associada:
+							</p>
+							<div id="img_footer">
+								<img title="Preencher o número da Request" src="public/images/post_1_img_21.png">
+								<p>Preencher o número da Request</p>
+							</div>
+							<p>
+								Na lista de FIELD EXITs agora está sendo apresentado o programa e tela informados:
+							</p>
+							<div id="img_footer">
+								<img title="Detalhe da nova FIELD EXIT (ainda inativa)" src="public/images/post_1_img_22.png">
+								<p>Detalhe da nova FIELD EXIT (ainda inativa)</p>
+							</div>
+							<p>
+								Para manter a integridade, é aconselhável efetuar a mesma 
+								consistência esta tela seja utilizada via batch input. 
+								Para tanto, repita o cadastamento informando programa e tela de batch input.
+							</p>
+							<p>
+								O resultado final será o seguinte:
+							</p>
+							<div id="img_footer">
+								<img title="Detalhe da nova FIELD EXIT agora para Batch Input" src="public/images/post_1_img_23.png">
+								<p>Detalhe da nova FIELD EXIT agora para Batch Input</p>
+							</div>
+							<p>
+								O último passo necessário que a <strong>FIELD EXIT</strong> esteja 
+								funcional é sua ativação. Clique no menu "Exit campo --> Ativar". 
+								Informe as requests (ou de ok) tanto quanto for solicitado.
+							</p>
+							<div id="img_footer">
+								<img title="FIELD EXIT Ativada" src="public/images/post_1_img_24.png">
+								<p>FIELD EXIT Ativada</p>
+							</div>
+							<p>
+								Ao tentar efetuar um lançamento na transação FB60,
+								a partir de agora o código da FIELD EXIT será acionado, 
+								fazendo a checagem de conteudo. 
+							</p>
+							<p>
+								Caso o campo não seja preenchido, será exibida uma tela de erro, conforme exibido abaixo:
+							</p>
+							<div id="img_footer">
+								<img title="Transação FB60 após ter FIELD EXIT ativada (veja mensagem de erro)" src="public/images/post_1_img_25.png">
+								<p>Transação FB60 após ter FIELD EXIT ativada (veja mensagem de erro)</p>
+							</div>
+						</div>
+						<div class="postmetadata">
+							 <p>
+							 	 Postado por
+								<span>rogerio</span>
+								| Categoria(s): 
+								<span>
+								<a rel="category tag" title="Veja todos posts da categoria SAP" href="public/categ_sap/">SAP</a>
+								</span>
+								| Postado em <span title="Originalmente postado atrav&eacute;s do Evernote nesta data">20.03.2009</span>
+							 </p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="body_right">
+			<div id="sidebars">
+				<div id="wp125adwrap_2c">
+					<div class="wp125ad odd">
+						<a href="http://www.akitaonrails.com"><img title="O 'Rails Man' do Brasil" src="public/images/akitaonrails.png"/></a>
+					</div>
+					<div class="wp125ad even">
+						<a href="http://rubyonrails.pro.br"><img title="Desenvolvimento Web sem dor" src="public/images/rails_logo.png"/></a>
+					</div>
+				</div>
+				<div id="sidebar" class="sidebars">
+					<ul>
+						<li class="widget_categories">
+							<h2>Categoria</h2>
+							<ul>
+								<li class="cat-item cat-item-3">
+									<a title="View all posts filed under audio" href="javascript:inativo();">audio</a>
+								</li>
+								<li class="cat-item cat-item-4">
+									<a title="View all posts filed under books" href="javascript:inativo();">books</a>
+								</li>
+							</ul>
+						</li>
+						<li class="widget_archives">
+							<h2>Archives</h2>
+							<ul>
+								<li><a title="Novembro 2007" href="javascript:inativo();">Novembro 2007</a></li>
+								<li><a title="Outubro 2007" href="javascript:inativo();">Outubro 2007</a></li>
+								<li><a title="Setembro 2007" href="javascript:inativo();">Setembro 2007</a></li>
+							</ul>
+						</li>
+						<li id="linkcat-" class="linkcat">
+							<h2>Partner Links</h2>
+							<ul class="xoxo blogroll">
+								<li><a href="http://wordpress.org/development/">Development Blog</a></li>
+								<li><a href="http://codex.wordpress.org/">Documentation</a></li>
+								<li><a href="http://wordpress.org/extend/plugins/">Plugins</a></li>
+								<li><a href="http://wordpress.org/extend/ideas/">Suggest Ideas</a></li>
+								<li><a href="http://wordpress.org/support/">Support Forum</a></li>
+								<li><a href="http://wordpress.org/extend/themes/">Themes</a></li>
+								<li><a href="http://planet.wordpress.org/">WordPress Planet</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+</div>
+
+<div id="footer">
+	<h2>
+		<a href="http://www.rogerionascimento.com">Rog&eacute;rio Nascimento</a>
+	</h2>
+	<div id="footer_text">
+		<p>&copy; Todos direitos reservados.</p>
+		<p><a href="mailto:rnascim@gmail.com">rnascim@gmail.com</a></p>
+		<p>Tema: <a href="http://www.skinpress.com">www.skinpress.com</a></p>
+	</div>
+</div>
+
+</div>
+
+<%= yield %>
+
+
+</body>
+</html>

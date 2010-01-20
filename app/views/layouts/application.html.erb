@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <title>Rog&eacute;rio on Tech :: Rails, SAP and other technology stuff</title>
+  <%= stylesheet_link_tag "scaffold" %>
+  <%= stylesheet_link_tag "style" %>
+  <%= auto_discovery_link_tag :atom, formatted_posts_path(:atom) %>
+  <%= javascript_include_tag :all %>
+  <script type="text/javascript" charset="utf-8">
+function inativo(){
+	s  = "© 2010 - Rogério Nascimento\n";
+	s += "Todos direitos reservados\n\n";
+	s += "Este recurso ainda não foi implementado.\n";
+	s += "Volte em alguns dias, pois com o uso de Ruby on Rails\n";
+	s += "tudo estará pronto de forma muito ágil.\n\n";
+	s += "Para entrar em contato:\n";
+	s += "rnascim@gmail.com";
+	alert(s);
+}
+  </script>
+</head>
+<body>
+
+<%= render :partial => "header" %>
+
+<div id="body"> 
+	<div id="body_top">
+		<div id="body_left">
+			<div id="body_left_content">
+				<div id="content" class="narrowcolumn">
+					<%= yield %>
+				</div>
+			</div>
+		</div>
+		<div id="body_right">
+			<div id="sidebars">
+				<div id="wp125adwrap_2c">
+					<div class="wp125ad odd">
+						<a href="http://www.akitaonrails.com"><img title="O 'Rails Man' do Brasil" src="/images/akitaonrails.png"/></a>
+					</div>
+					<div class="wp125ad even">
+						<a href="http://rubyonrails.pro.br"><img title="Desenvolvimento Web sem dor" src="/images/rails_logo.png"/></a>
+					</div>
+				</div>
+				<div id="sidebar" class="sidebars">
+					<ul>
+						<li class="widget_categories">
+							<h2>Categoria</h2>
+							<ul>
+								<li class="cat-item cat-item-3">
+									<a title="View all posts filed under audio" href="http://www.skinpress.com/demo/category/audio/">audio</a>
+								</li>
+								<li class="cat-item cat-item-4">
+									<a title="View all posts filed under books" href="http://www.skinpress.com/demo/category/books/">books</a>
+								</li>
+							</ul>
+						</li>
+						<li class="widget_archives">
+							<h2>Archives</h2>
+							<ul>
+								<li><a title="Novembro 2007" href="www.rogerionascimento.com">Novembro 2007</a></li>
+								<li><a title="Outubro 2007" href="www.rogerionascimento.com">Outubro 2007</a></li>
+								<li><a title="Setembro 2007" href="www.rogerionascimento.com">Setembro 2007</a></li>
+							</ul>
+						</li>
+						<li id="linkcat-" class="linkcat">
+							<h2>Partner Links</h2>
+							<ul class="xoxo blogroll">
+								<li><a href="http://wordpress.org/development/">Development Blog</a></li>
+								<li><a href="http://codex.wordpress.org/">Documentation</a></li>
+								<li><a href="http://wordpress.org/extend/plugins/">Plugins</a></li>
+								<li><a href="http://wordpress.org/extend/ideas/">Suggest Ideas</a></li>
+								<li><a href="http://wordpress.org/support/">Support Forum</a></li>
+								<li><a href="http://wordpress.org/extend/themes/">Themes</a></li>
+								<li><a href="http://planet.wordpress.org/">WordPress Planet</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>	
+	</div>
+</div>
+
+<div id="footer">
+	<h2>
+		<a href="http://www.rogerionascimento.com">Rog&eacute;rio Nascimento</a>
+	</h2>
+	<div id="footer_text">
+		<p>
+			&copy;Todos direitos reservados<br>
+			<a href="mailto:rnascim@gmail.com">rnascim@gmail.com</a><br>
+			Tema: <a href="http://www.skinpress.com">www.skinpress.com</a>
+		</p>
+	</div>
+</div>
+</div>
+
+</body>
+</html>

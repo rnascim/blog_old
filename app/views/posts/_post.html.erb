@@ -1,0 +1,27 @@
+<div id="post-<%= post.id %>" class="post">
+	<div class="post-top">
+		<div class="post-title">
+			<h2><%= link_to post.assunto, nil , { :title => post.assunto, :rel => "bookmark" } %></h2>
+			<h4><%= post.comments.size %></h4>
+		</div>
+	</div>
+	<div class="entry">
+		<p><%= post.resumo %></p>
+	</div>
+	<div id="read_more">
+		<p><%= link_to "Leia mais...", nil , { :title => post.assunto, :rel => "bookmark" } %></p>
+	</div>
+	<div class="postmetadata">
+		 <p>
+		 	 id: <%= post.id %> 
+		    |
+		     Postado por
+			<span><%= post.createdby %></span>
+			| Tags: 
+			<span>
+			<a rel="category tag" title="Veja todos posts da categoria SAP" href="javascript:inativo();">SAP</a>
+			</span>
+			| Postado em <%= post.created_at %>
+		 </p>
+	</div>
+</div>
