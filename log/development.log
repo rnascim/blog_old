@@ -33445,3 +33445,321 @@ ActionController::RoutingError (No route matches "/stylesheets/style.css" with {
 Rendering rescues/layout (not_found)
 Rendered posts/_header (25.5ms)
 Completed in 52ms (View: 44, DB: 1) | 200 OK [http://localhost/Posts]
+
+
+Processing PostsController#index to atom (for ::1 at 2010-01-22 16:08:58) [GET]
+  [4;36;1mPost Load (0.6ms)[0m   [0;1mSELECT * FROM "posts" [0m
+Rendering posts/index
+Completed in 189ms (View: 177, DB: 1) | 200 OK [http://localhost/posts.atom]
+
+
+Processing PostsController#index to atom (for ::1 at 2010-01-22 16:39:10) [GET]
+  [4;36;1mPost Load (0.6ms)[0m   [0;1mSELECT * FROM "posts" [0m
+Rendering posts/index
+Completed in 407ms (View: 323, DB: 1) | 200 OK [http://localhost/posts.atom]
+
+
+Processing PostsController#index (for ::1 at 2010-01-22 16:47:54) [GET]
+  [4;36;1mPost Load (0.6ms)[0m   [0;1mSELECT * FROM "posts" [0m
+Rendering template within layouts/application
+Rendering posts/index
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 3) [0m
+Rendered posts/_post (57.5ms)
+DEPRECATION WARNING: formatted_posts_path() has been deprecated. Please pass format to the standard posts_path method instead.. (called from _run_erb_app47views47layouts47application46html46erb at /Users/Roger/rails_app/blog/app/views/layouts/application.html.erb:10)
+Rendered posts/_header (25.2ms)
+Completed in 119ms (View: 106, DB: 1) | 200 OK [http://localhost/Posts]
+
+
+Processing ApplicationController#index (for ::1 at 2010-01-22 16:47:54) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/style.css" with {:method=>:get}):
+  passenger (2.2.8) lib/phusion_passenger/rack/request_handler.rb:92:in `process_request'
+  passenger (2.2.8) lib/phusion_passenger/abstract_request_handler.rb:207:in `main_loop'
+  passenger (2.2.8) lib/phusion_passenger/railz/application_spawner.rb:385:in `start_request_handler'
+  passenger (2.2.8) lib/phusion_passenger/railz/application_spawner.rb:343:in `handle_spawn_application'
+  passenger (2.2.8) lib/phusion_passenger/utils.rb:184:in `safe_fork'
+  passenger (2.2.8) lib/phusion_passenger/railz/application_spawner.rb:341:in `handle_spawn_application'
+  passenger (2.2.8) lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+  passenger (2.2.8) lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+  passenger (2.2.8) lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+  passenger (2.2.8) lib/phusion_passenger/abstract_server.rb:163:in `start'
+  passenger (2.2.8) lib/phusion_passenger/railz/application_spawner.rb:209:in `start'
+  passenger (2.2.8) lib/phusion_passenger/spawn_manager.rb:262:in `spawn_rails_application'
+  passenger (2.2.8) lib/phusion_passenger/abstract_server_collection.rb:126:in `lookup_or_add'
+  passenger (2.2.8) lib/phusion_passenger/spawn_manager.rb:256:in `spawn_rails_application'
+  passenger (2.2.8) lib/phusion_passenger/abstract_server_collection.rb:80:in `synchronize'
+  passenger (2.2.8) lib/phusion_passenger/abstract_server_collection.rb:79:in `synchronize'
+  passenger (2.2.8) lib/phusion_passenger/spawn_manager.rb:255:in `spawn_rails_application'
+  passenger (2.2.8) lib/phusion_passenger/spawn_manager.rb:154:in `spawn_application'
+  passenger (2.2.8) lib/phusion_passenger/spawn_manager.rb:287:in `handle_spawn_application'
+  passenger (2.2.8) lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+  passenger (2.2.8) lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+  passenger (2.2.8) lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#index to atom (for ::1 at 2010-01-22 16:47:55) [GET]
+  [4;36;1mPost Load (0.5ms)[0m   [0;1mSELECT * FROM "posts" [0m
+Rendering posts/index
+Completed in 16ms (View: 11, DB: 1) | 200 OK [http://localhost/posts.atom]
+
+
+Processing PostsController#index (for ::1 at 2010-01-22 16:47:56) [GET]
+  [4;35;1mPost Load (0.6ms)[0m   [0mSELECT * FROM "posts" [0m
+Rendering template within layouts/application
+Rendering posts/index
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 3) [0m
+Rendered posts/_post (8.3ms)
+DEPRECATION WARNING: formatted_posts_path() has been deprecated. Please pass format to the standard posts_path method instead.. (called from _run_erb_app47views47layouts47application46html46erb at /Users/Roger/rails_app/blog/app/views/layouts/application.html.erb:10)
+Rendered posts/_header (0.2ms)
+Completed in 18ms (View: 12, DB: 1) | 200 OK [http://localhost/Posts]
+
+
+Processing ApplicationController#index (for ::1 at 2010-01-22 16:47:56) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/style.css" with {:method=>:get}):
+  passenger (2.2.8) lib/phusion_passenger/rack/request_handler.rb:92:in `process_request'
+  passenger (2.2.8) lib/phusion_passenger/abstract_request_handler.rb:207:in `main_loop'
+  passenger (2.2.8) lib/phusion_passenger/railz/application_spawner.rb:385:in `start_request_handler'
+  passenger (2.2.8) lib/phusion_passenger/railz/application_spawner.rb:343:in `handle_spawn_application'
+  passenger (2.2.8) lib/phusion_passenger/utils.rb:184:in `safe_fork'
+  passenger (2.2.8) lib/phusion_passenger/railz/application_spawner.rb:341:in `handle_spawn_application'
+  passenger (2.2.8) lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+  passenger (2.2.8) lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+  passenger (2.2.8) lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+  passenger (2.2.8) lib/phusion_passenger/abstract_server.rb:163:in `start'
+  passenger (2.2.8) lib/phusion_passenger/railz/application_spawner.rb:209:in `start'
+  passenger (2.2.8) lib/phusion_passenger/spawn_manager.rb:262:in `spawn_rails_application'
+  passenger (2.2.8) lib/phusion_passenger/abstract_server_collection.rb:126:in `lookup_or_add'
+  passenger (2.2.8) lib/phusion_passenger/spawn_manager.rb:256:in `spawn_rails_application'
+  passenger (2.2.8) lib/phusion_passenger/abstract_server_collection.rb:80:in `synchronize'
+  passenger (2.2.8) lib/phusion_passenger/abstract_server_collection.rb:79:in `synchronize'
+  passenger (2.2.8) lib/phusion_passenger/spawn_manager.rb:255:in `spawn_rails_application'
+  passenger (2.2.8) lib/phusion_passenger/spawn_manager.rb:154:in `spawn_application'
+  passenger (2.2.8) lib/phusion_passenger/spawn_manager.rb:287:in `handle_spawn_application'
+  passenger (2.2.8) lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+  passenger (2.2.8) lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+  passenger (2.2.8) lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#edit (for ::1 at 2010-01-22 16:48:03) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Post with ID=1):
+  app/controllers/posts_controller.rb:39:in `edit'
+  passenger (2.2.8) lib/phusion_passenger/rack/request_handler.rb:92:in `process_request'
+  passenger (2.2.8) lib/phusion_passenger/abstract_request_handler.rb:207:in `main_loop'
+  passenger (2.2.8) lib/phusion_passenger/railz/application_spawner.rb:385:in `start_request_handler'
+  passenger (2.2.8) lib/phusion_passenger/railz/application_spawner.rb:343:in `handle_spawn_application'
+  passenger (2.2.8) lib/phusion_passenger/utils.rb:184:in `safe_fork'
+  passenger (2.2.8) lib/phusion_passenger/railz/application_spawner.rb:341:in `handle_spawn_application'
+  passenger (2.2.8) lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+  passenger (2.2.8) lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+  passenger (2.2.8) lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+  passenger (2.2.8) lib/phusion_passenger/abstract_server.rb:163:in `start'
+  passenger (2.2.8) lib/phusion_passenger/railz/application_spawner.rb:209:in `start'
+  passenger (2.2.8) lib/phusion_passenger/spawn_manager.rb:262:in `spawn_rails_application'
+  passenger (2.2.8) lib/phusion_passenger/abstract_server_collection.rb:126:in `lookup_or_add'
+  passenger (2.2.8) lib/phusion_passenger/spawn_manager.rb:256:in `spawn_rails_application'
+  passenger (2.2.8) lib/phusion_passenger/abstract_server_collection.rb:80:in `synchronize'
+  passenger (2.2.8) lib/phusion_passenger/abstract_server_collection.rb:79:in `synchronize'
+  passenger (2.2.8) lib/phusion_passenger/spawn_manager.rb:255:in `spawn_rails_application'
+  passenger (2.2.8) lib/phusion_passenger/spawn_manager.rb:154:in `spawn_application'
+  passenger (2.2.8) lib/phusion_passenger/spawn_manager.rb:287:in `handle_spawn_application'
+  passenger (2.2.8) lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+  passenger (2.2.8) lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+  passenger (2.2.8) lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+
+Rendered rescues/_trace (37.0ms)
+Rendered rescues/_request_and_response (2.5ms)
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#edit (for ::1 at 2010-01-22 16:48:03) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPost Load (0.1ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Post with ID=1):
+  app/controllers/posts_controller.rb:39:in `edit'
+  passenger (2.2.8) lib/phusion_passenger/rack/request_handler.rb:92:in `process_request'
+  passenger (2.2.8) lib/phusion_passenger/abstract_request_handler.rb:207:in `main_loop'
+  passenger (2.2.8) lib/phusion_passenger/railz/application_spawner.rb:385:in `start_request_handler'
+  passenger (2.2.8) lib/phusion_passenger/railz/application_spawner.rb:343:in `handle_spawn_application'
+  passenger (2.2.8) lib/phusion_passenger/utils.rb:184:in `safe_fork'
+  passenger (2.2.8) lib/phusion_passenger/railz/application_spawner.rb:341:in `handle_spawn_application'
+  passenger (2.2.8) lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+  passenger (2.2.8) lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+  passenger (2.2.8) lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+  passenger (2.2.8) lib/phusion_passenger/abstract_server.rb:163:in `start'
+  passenger (2.2.8) lib/phusion_passenger/railz/application_spawner.rb:209:in `start'
+  passenger (2.2.8) lib/phusion_passenger/spawn_manager.rb:262:in `spawn_rails_application'
+  passenger (2.2.8) lib/phusion_passenger/abstract_server_collection.rb:126:in `lookup_or_add'
+  passenger (2.2.8) lib/phusion_passenger/spawn_manager.rb:256:in `spawn_rails_application'
+  passenger (2.2.8) lib/phusion_passenger/abstract_server_collection.rb:80:in `synchronize'
+  passenger (2.2.8) lib/phusion_passenger/abstract_server_collection.rb:79:in `synchronize'
+  passenger (2.2.8) lib/phusion_passenger/spawn_manager.rb:255:in `spawn_rails_application'
+  passenger (2.2.8) lib/phusion_passenger/spawn_manager.rb:154:in `spawn_application'
+  passenger (2.2.8) lib/phusion_passenger/spawn_manager.rb:287:in `handle_spawn_application'
+  passenger (2.2.8) lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+  passenger (2.2.8) lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+  passenger (2.2.8) lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+
+Rendered rescues/_trace (95.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#edit (for ::1 at 2010-01-22 16:48:07) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPost Load (0.1ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Post with ID=1):
+  app/controllers/posts_controller.rb:39:in `edit'
+  passenger (2.2.8) lib/phusion_passenger/rack/request_handler.rb:92:in `process_request'
+  passenger (2.2.8) lib/phusion_passenger/abstract_request_handler.rb:207:in `main_loop'
+  passenger (2.2.8) lib/phusion_passenger/railz/application_spawner.rb:385:in `start_request_handler'
+  passenger (2.2.8) lib/phusion_passenger/railz/application_spawner.rb:343:in `handle_spawn_application'
+  passenger (2.2.8) lib/phusion_passenger/utils.rb:184:in `safe_fork'
+  passenger (2.2.8) lib/phusion_passenger/railz/application_spawner.rb:341:in `handle_spawn_application'
+  passenger (2.2.8) lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+  passenger (2.2.8) lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+  passenger (2.2.8) lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+  passenger (2.2.8) lib/phusion_passenger/abstract_server.rb:163:in `start'
+  passenger (2.2.8) lib/phusion_passenger/railz/application_spawner.rb:209:in `start'
+  passenger (2.2.8) lib/phusion_passenger/spawn_manager.rb:262:in `spawn_rails_application'
+  passenger (2.2.8) lib/phusion_passenger/abstract_server_collection.rb:126:in `lookup_or_add'
+  passenger (2.2.8) lib/phusion_passenger/spawn_manager.rb:256:in `spawn_rails_application'
+  passenger (2.2.8) lib/phusion_passenger/abstract_server_collection.rb:80:in `synchronize'
+  passenger (2.2.8) lib/phusion_passenger/abstract_server_collection.rb:79:in `synchronize'
+  passenger (2.2.8) lib/phusion_passenger/spawn_manager.rb:255:in `spawn_rails_application'
+  passenger (2.2.8) lib/phusion_passenger/spawn_manager.rb:154:in `spawn_application'
+  passenger (2.2.8) lib/phusion_passenger/spawn_manager.rb:287:in `handle_spawn_application'
+  passenger (2.2.8) lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+  passenger (2.2.8) lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+  passenger (2.2.8) lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+
+Rendered rescues/_trace (39.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#edit (for ::1 at 2010-01-22 16:48:07) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPost Load (0.1ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Post with ID=1):
+  app/controllers/posts_controller.rb:39:in `edit'
+  passenger (2.2.8) lib/phusion_passenger/rack/request_handler.rb:92:in `process_request'
+  passenger (2.2.8) lib/phusion_passenger/abstract_request_handler.rb:207:in `main_loop'
+  passenger (2.2.8) lib/phusion_passenger/railz/application_spawner.rb:385:in `start_request_handler'
+  passenger (2.2.8) lib/phusion_passenger/railz/application_spawner.rb:343:in `handle_spawn_application'
+  passenger (2.2.8) lib/phusion_passenger/utils.rb:184:in `safe_fork'
+  passenger (2.2.8) lib/phusion_passenger/railz/application_spawner.rb:341:in `handle_spawn_application'
+  passenger (2.2.8) lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+  passenger (2.2.8) lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+  passenger (2.2.8) lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+  passenger (2.2.8) lib/phusion_passenger/abstract_server.rb:163:in `start'
+  passenger (2.2.8) lib/phusion_passenger/railz/application_spawner.rb:209:in `start'
+  passenger (2.2.8) lib/phusion_passenger/spawn_manager.rb:262:in `spawn_rails_application'
+  passenger (2.2.8) lib/phusion_passenger/abstract_server_collection.rb:126:in `lookup_or_add'
+  passenger (2.2.8) lib/phusion_passenger/spawn_manager.rb:256:in `spawn_rails_application'
+  passenger (2.2.8) lib/phusion_passenger/abstract_server_collection.rb:80:in `synchronize'
+  passenger (2.2.8) lib/phusion_passenger/abstract_server_collection.rb:79:in `synchronize'
+  passenger (2.2.8) lib/phusion_passenger/spawn_manager.rb:255:in `spawn_rails_application'
+  passenger (2.2.8) lib/phusion_passenger/spawn_manager.rb:154:in `spawn_application'
+  passenger (2.2.8) lib/phusion_passenger/spawn_manager.rb:287:in `handle_spawn_application'
+  passenger (2.2.8) lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+  passenger (2.2.8) lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+  passenger (2.2.8) lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+
+Rendered rescues/_trace (32.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#edit (for ::1 at 2010-01-22 16:48:13) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mPost Load (0.4ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 3) [0m
+Rendering template within layouts/application
+Rendering posts/edit
+DEPRECATION WARNING: formatted_posts_path() has been deprecated. Please pass format to the standard posts_path method instead.. (called from _run_erb_app47views47layouts47application46html46erb at /Users/Roger/rails_app/blog/app/views/layouts/application.html.erb:10)
+Rendered posts/_header (1.1ms)
+Completed in 122ms (View: 35, DB: 0) | 200 OK [http://localhost/posts/edit/3]
+
+
+Processing ApplicationController#index (for ::1 at 2010-01-22 16:48:13) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/style.css" with {:method=>:get}):
+  passenger (2.2.8) lib/phusion_passenger/rack/request_handler.rb:92:in `process_request'
+  passenger (2.2.8) lib/phusion_passenger/abstract_request_handler.rb:207:in `main_loop'
+  passenger (2.2.8) lib/phusion_passenger/railz/application_spawner.rb:385:in `start_request_handler'
+  passenger (2.2.8) lib/phusion_passenger/railz/application_spawner.rb:343:in `handle_spawn_application'
+  passenger (2.2.8) lib/phusion_passenger/utils.rb:184:in `safe_fork'
+  passenger (2.2.8) lib/phusion_passenger/railz/application_spawner.rb:341:in `handle_spawn_application'
+  passenger (2.2.8) lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+  passenger (2.2.8) lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+  passenger (2.2.8) lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+  passenger (2.2.8) lib/phusion_passenger/abstract_server.rb:163:in `start'
+  passenger (2.2.8) lib/phusion_passenger/railz/application_spawner.rb:209:in `start'
+  passenger (2.2.8) lib/phusion_passenger/spawn_manager.rb:262:in `spawn_rails_application'
+  passenger (2.2.8) lib/phusion_passenger/abstract_server_collection.rb:126:in `lookup_or_add'
+  passenger (2.2.8) lib/phusion_passenger/spawn_manager.rb:256:in `spawn_rails_application'
+  passenger (2.2.8) lib/phusion_passenger/abstract_server_collection.rb:80:in `synchronize'
+  passenger (2.2.8) lib/phusion_passenger/abstract_server_collection.rb:79:in `synchronize'
+  passenger (2.2.8) lib/phusion_passenger/spawn_manager.rb:255:in `spawn_rails_application'
+  passenger (2.2.8) lib/phusion_passenger/spawn_manager.rb:154:in `spawn_application'
+  passenger (2.2.8) lib/phusion_passenger/spawn_manager.rb:287:in `handle_spawn_application'
+  passenger (2.2.8) lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+  passenger (2.2.8) lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+  passenger (2.2.8) lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#index to atom (for ::1 at 2010-01-22 16:48:13) [GET]
+  [4;35;1mPost Load (0.6ms)[0m   [0mSELECT * FROM "posts" [0m
+Rendering posts/index
+Completed in 60ms (View: 55, DB: 1) | 200 OK [http://localhost/posts.atom]
+
+
+Processing PostsController#edit (for ::1 at 2010-01-22 16:48:14) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mPost Load (1.4ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 3) [0m
+Rendering template within layouts/application
+Rendering posts/edit
+DEPRECATION WARNING: formatted_posts_path() has been deprecated. Please pass format to the standard posts_path method instead.. (called from _run_erb_app47views47layouts47application46html46erb at /Users/Roger/rails_app/blog/app/views/layouts/application.html.erb:10)
+
+
+Processing ApplicationController#index (for ::1 at 2010-01-22 16:48:14) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/style.css" with {:method=>:get}):
+  passenger (2.2.8) lib/phusion_passenger/rack/request_handler.rb:92:in `process_request'
+  passenger (2.2.8) lib/phusion_passenger/abstract_request_handler.rb:207:in `main_loop'
+  passenger (2.2.8) lib/phusion_passenger/railz/application_spawner.rb:385:in `start_request_handler'
+  passenger (2.2.8) lib/phusion_passenger/railz/application_spawner.rb:343:in `handle_spawn_application'
+  passenger (2.2.8) lib/phusion_passenger/utils.rb:184:in `safe_fork'
+  passenger (2.2.8) lib/phusion_passenger/railz/application_spawner.rb:341:in `handle_spawn_application'
+  passenger (2.2.8) lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+  passenger (2.2.8) lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+  passenger (2.2.8) lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+  passenger (2.2.8) lib/phusion_passenger/abstract_server.rb:163:in `start'
+  passenger (2.2.8) lib/phusion_passenger/railz/application_spawner.rb:209:in `start'
+  passenger (2.2.8) lib/phusion_passenger/spawn_manager.rb:262:in `spawn_rails_application'
+  passenger (2.2.8) lib/phusion_passenger/abstract_server_collection.rb:126:in `lookup_or_add'
+  passenger (2.2.8) lib/phusion_passenger/spawn_manager.rb:256:in `spawn_rails_application'
+  passenger (2.2.8) lib/phusion_passenger/abstract_server_collection.rb:80:in `synchronize'
+  passenger (2.2.8) lib/phusion_passenger/abstract_server_collection.rb:79:in `synchronize'
+  passenger (2.2.8) lib/phusion_passenger/spawn_manager.rb:255:in `spawn_rails_application'
+  passenger (2.2.8) lib/phusion_passenger/spawn_manager.rb:154:in `spawn_application'
+  passenger (2.2.8) lib/phusion_passenger/spawn_manager.rb:287:in `handle_spawn_application'
+  passenger (2.2.8) lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+  passenger (2.2.8) lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+  passenger (2.2.8) lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+
+Rendering rescues/layout (not_found)
+Rendered posts/_header (0.2ms)
+Completed in 38ms (View: 30, DB: 1) | 200 OK [http://localhost/posts/edit/3]
