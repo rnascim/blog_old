@@ -33763,3 +33763,9 @@ ActionController::RoutingError (No route matches "/stylesheets/style.css" with {
 Rendering rescues/layout (not_found)
 Rendered posts/_header (0.2ms)
 Completed in 38ms (View: 30, DB: 1) | 200 OK [http://localhost/posts/edit/3]
+
+
+Processing PostsController#index to atom (for ::1 at 2010-01-22 17:09:21) [GET]
+  [4;36;1mPost Load (1.2ms)[0m   [0;1mSELECT * FROM "posts" [0m
+Rendering posts/index
+Completed in 235ms (View: 196, DB: 1) | 200 OK [http://localhost/posts.atom]
