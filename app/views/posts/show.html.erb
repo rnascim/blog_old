@@ -1,3 +1,22 @@
 <%=
 @caller_page = "show"
 render :partial => 'post' %>
+
+<div class="post-top">
+	<div class="post-title">
+		<h2>Coment&aacute;rios</h2>
+		<!-- <h4><%# Post.comments.size %></h4> -->
+	</div>
+</div>
+
+<div id="comments">
+	<%= render :partial => @post.comments %>
+</div>
+	
+<% remote_form_for [@post, Comment.new] do |f| %>
+  <p>
+  	<%= f.label :body, "Novo Coment&aacute;rio" %> <br />
+	<%= f.text_area :body %>
+  </p>
+  <p><%= f.submit "Adicione o coment&aacute;rio"%></p>
+<% end -%>
