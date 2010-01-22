@@ -1101,7 +1101,19 @@ label {
   font-size:11px;
 }
 
-input.short, input.med, select.med, textarea.textbox, textarea { 
+textarea.textbox, textarea {
+  color : #000000; 
+  padding : 3px; 
+  border : 1px solid #c2af97;
+  background-color : #fffff;
+  font-size:13px;
+  font-family:Arial, Helvetica, sans-serif;
+  width : 60%;
+  height : auto;
+  margin:0 0 5px 20px;	
+}
+
+input.short, input.med, select.med { 
   color : #000000; 
   padding : 3px; 
   border : 1px solid #c2af97;

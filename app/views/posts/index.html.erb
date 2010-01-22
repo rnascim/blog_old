@@ -1,3 +1,4 @@
 <%=
 sorted_posts = @posts.sort{ |a,b| b.id <=> a.id }
+@caller_page = "index"
 render :partial => 'post', :collection => sorted_posts %>
