@@ -13,7 +13,7 @@ render :partial => 'post' %>
 	<%= render :partial => @post.comments %>
 </div>
 	
-<% remote_form_for [@post, Comment.new] do |f| %>
+<% form_for [@post, Comment.new] do |f| %>
   <p>
   	<%= f.label :body, "Novo Coment&aacute;rio" %> <br />
 	<%= f.text_area :body %>
