@@ -1,4 +1,9 @@
 <%=
-sorted_posts = @posts.sort{ |a,b| b.id <=> a.id }
+@selected = Post.find(:all, :conditions => {:ativo => '1'}, :order => 'id DESC')
+
+# @selected = Post.find(:all, :order => 'id DESC')
+# sorted_posts = @posts.sort{ |a,b| b.id <=> a.id }
+
 @caller_page = "index"
-render :partial => 'post', :collection => sorted_posts %>
+# render :partial => 'post', :collection => sorted_posts 
+render :partial => 'post', :collection => @selected %>
