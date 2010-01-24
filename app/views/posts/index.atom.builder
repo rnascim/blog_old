@@ -1,5 +1,5 @@
 atom_feed do |feed|
-  feed.title("Rogerio on Tech :: Rails, SAP and technology stuff")
+  feed.title("Rogerio on Tech :: SAP, Rails and technology stuff")
   feed.updated(@posts.first.created_at)
   
   @selected = Post.find(:all, :conditions => {:ativo => '1'} )
