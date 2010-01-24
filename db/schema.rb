@@ -9,7 +9,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100123041720) do
+ActiveRecord::Schema.define(:version => 20100124010150) do
+
+  create_table "abouts", :force => true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "ativo"
+    t.string   "texto",      :limit => nil
+  end
 
   create_table "comments", :force => true do |t|
     t.string   "commenter"
@@ -17,6 +24,13 @@ ActiveRecord::Schema.define(:version => 20100123041720) do
     t.integer  "post_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "contacts", :force => true do |t|
+    t.text     "texto"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "ativo",      :limit => nil
   end
 
   create_table "posts", :force => true do |t|

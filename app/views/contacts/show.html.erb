@@ -1,0 +1,13 @@
+<p>
+  <b>Texto:</b>
+  <%=h @contact.texto %>
+</p>
+
+<p>
+  <b>Ativo:</b>
+  <%=h @contact.ativo %>
+</p>
+
+
+<%= link_to 'Edit', edit_contact_path(@contact) %> |
+<%= link_to 'Back', contacts_path %>

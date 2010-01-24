@@ -1,0 +1,20 @@
+<% @abouts.each do |about| %>
+<div id="About-<%= about.id %>" class="post">
+	<div class="post-top">
+		<div class="post-title">
+			<h2>Sobre este site...</h2>
+		</div>
+	</div>
+
+	<div class="entry">
+		<p><%= about.texto%></p>
+	</div>
+	<div class="postmetadata">
+		 <p>
+		     Texto feito por Rog&eacute;rio Nascimento
+			<input type="hidden" name="id_<%= about.id %>" value="<%= about.id %>">
+		 </p>
+	</div>
+</div>
+<% end %>
+

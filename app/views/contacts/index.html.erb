@@ -1,0 +1,20 @@
+<% @contacts.each do |contact| %>
+<div id="Contact-<%= contact.id %>" class="post">
+	<div class="post-top">
+		<div class="post-title">
+			<h2>Como &eacute; poss&iacute;vel me contactar? Use um dos meios abaixo:</h2>
+		</div>
+	</div>
+
+	<div class="entry">
+		<p><%= contact.texto %></p>
+	</div>
+	<div class="postmetadata">
+		 <p>
+		     Texto feito por Rog&eacute;rio Nascimento
+			<input type="hidden" name="id_<%= contact.id %>" value="<%= contact.id %>">
+		 </p>
+	</div>
+</div>
+
+<% end%>
