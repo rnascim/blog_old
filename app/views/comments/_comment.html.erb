@@ -2,7 +2,10 @@
 <div id="comment">
 	<p>
 		Posted at <strong><%= time_ago_in_words(comment.created_at) %></strong> ago<br />
-		<%= h(comment.body)%>
+		<%= h(comment.body)%> <br/>
+		Coment&aacute;rio feito por: <br/>
+		<%= h(comment.commenter)%>
+		
 		<br />
 	</p>	
 </div>

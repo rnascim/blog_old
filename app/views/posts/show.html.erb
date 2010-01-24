@@ -18,5 +18,10 @@ render :partial => 'post' %>
   	<%= f.label :body, "Novo Coment&aacute;rio" %> <br />
 	<%= f.text_area :body %>
   </p>
+  <p>
+  	<%= f.label :commenter, "Coment&aacute;rio feito por:" %> <br />
+	<%= f.text_field :commenter %>
+  </p>
+
   <p><%= f.submit "Adicione o coment&aacute;rio"%></p>
 <% end -%>
