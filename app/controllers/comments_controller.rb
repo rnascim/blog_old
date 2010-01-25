@@ -1,4 +1,6 @@
 class CommentsController < ApplicationController
+  # before_filter :authenticate, :except => [:index, :show]
+
   def create
     @post = Post.find(params[:post_id])
     # @comment = @post.comments.create!(params[:comment])
@@ -14,14 +16,4 @@ class CommentsController < ApplicationController
       end
     end
   end
-  
-  # if @post.save
-  #   flash[:notice] = 'Post was successfully created.'
-  #   format.html { redirect_to(@post) }
-  #   format.xml  { render :xml => @post, :status => :created, :location => @post }
-  # else
-  #   format.html { render :action => "new" }
-  #   format.xml  { render :xml => @post.errors, :status => :unprocessable_entity }
-  # end
-  
 end

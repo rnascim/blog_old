@@ -75,14 +75,32 @@ function inativo(){
 			<div id="sidebars">
 				<div id="wp125adwrap_2c">
 					<div class="wp125ad odd">
-						<a href="http://www.akitaonrails.com"><img title="O 'Rails Man' do Brasil" src="/images/akitaonrails.png"/></a>
+						<a href="http://www.sap.com"><img title="O melhor sistema ERP para sua empresa" src="/images/SAP_logo.png"/></a>
 					</div>
 					<div class="wp125ad even">
 						<a href="http://rubyonrails.pro.br"><img title="Desenvolvimento Web sem dor" src="/images/rails_logo.png"/></a>
 					</div>
+					<!-- <div class="wp125ad odd">
+						<a href="http://www.akitaonrails.com"><img title="O 'Rails Man' do Brasil" src="/images/akitaonrails.png"/></a>
+					</div> -->
 				</div>
 				<div id="sidebar" class="sidebars">
 					<ul>
+
+						<!-- <div class="wp125ad odd">
+							<a href="<%= logout_path %>"><img title="Efetuar Logout" src="/images/SAP_logo.png"/></a>
+						</div>	-->					
+
+						<% if logged_in? %>
+						<li class="widget_categories">
+							<h2>Links de Sitema</h2>
+							<ul>
+								<li class="cat-item">
+									<a href="<%= logout_path %>">Efetuar Logout</a>
+								</li>
+							</ul>
+						</li>
+						<% end %>
 						<li class="widget_categories">
 							<h2>Categoria</h2>
 							<ul>

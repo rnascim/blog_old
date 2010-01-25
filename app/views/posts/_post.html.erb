@@ -21,6 +21,14 @@
 
 	<div class="postmetadata">
 		 <p>
+			<% if logged_in? %>
+			<% if post.ativo != '1' %>
+				Post INATIVO
+			<% end%>
+			|
+			<%= link_to 'Editar', edit_post_path(post)%>
+			|
+			<% end%>
 		     Postado por
 			<span><%= post.createdby %></span>
 			| Tags: 

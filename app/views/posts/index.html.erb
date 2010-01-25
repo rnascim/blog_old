@@ -1,5 +1,9 @@
 <%=
-@selected = Post.find(:all, :conditions => {:ativo => '1'}, :order => 'id DESC')
+if logged_in?
+	@selected = Post.find(:all, :order => 'id DESC')	
+else
+	@selected = Post.find(:all, :conditions => {:ativo => '1'}, :order => 'id DESC')	
+end
 
 # @selected = Post.find(:all, :order => 'id DESC')
 # sorted_posts = @posts.sort{ |a,b| b.id <=> a.id }

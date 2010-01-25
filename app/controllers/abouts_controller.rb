@@ -1,5 +1,5 @@
 class AboutsController < ApplicationController
-  before_filter :authenticate, :except => [:index, :show]
+  # before_filter :authenticate, :except => [:index, :show]
   
   # GET /abouts
   # GET /abouts.xml
@@ -82,16 +82,6 @@ class AboutsController < ApplicationController
     respond_to do |format|
       format.html { redirect_to(abouts_url) }
       format.xml  { head :ok }
-    end
-  end
-
-  private 
-  
-  def authenticate
-    authenticate_or_request_with_http_basic do |name, password|
-      u = Users.find_by_user(name)
-      u != nil && u.password == password
-      # name == "admin" && password == "wolvie"
     end
   end
 end
