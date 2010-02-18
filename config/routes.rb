@@ -9,7 +9,7 @@ ActionController::Routing::Routes.draw do |map|
 
   map.home '', :controller => 'posts', :action => 'index'
   map.logout 'logout', :controller => 'application', :action => 'logout'
-  map.cv 'cv', :controller => 'curriculos', :action => 'index'
+  map.cv 'cv', :controller => 'curriculos', :action => 'index' 
   # map.login 'login', :controller =>   'session', :action => 'create'
   # map.logout 'logout', :controller  => 'session', :action => 'destroy'
   
