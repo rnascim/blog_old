@@ -8,4 +8,18 @@ module ApplicationHelper
     return text
   end
 
+  def email
+    return( "rogerio@rogerionascimento.com" )
+  end
+  
+  def email_href
+    local_email = email
+    return "<a href='mailto:#{local_email}'>#{local_email}</a>"
+  end
+  
+  def email_href_with(text)
+    local_email = email
+    return "<a href='mailto:#{local_email}'>#{text}</a>"
+  end
+
 end
