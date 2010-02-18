@@ -3800,3 +3800,40 @@ ActionController::RoutingError (No route matches "/stylesheets/style.css" with {
   passenger (2.2.8) lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
 
 Rendering rescues/layout (not_found)
+
+
+Processing CurriculosController#index (for ::1 at 2010-02-18 02:12:54) [GET]
+  [4;35;1mCurriculo Load (0.5ms)[0m   [0mSELECT * FROM "curriculos" [0m
+Rendering template within layouts/application
+Rendering curriculos/index
+DEPRECATION WARNING: formatted_posts_path() has been deprecated. Please pass format to the standard posts_path method instead.. (called from _run_erb_app47views47layouts47application46html46erb at /Users/Roger/rails_app/blog/app/views/layouts/application.html.erb:10)
+Completed in 34ms (View: 30, DB: 1) | 200 OK [http://localhost/cv]
+
+
+Processing ApplicationController#index (for ::1 at 2010-02-18 02:12:54) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/style.css" with {:method=>:get}):
+  passenger (2.2.8) lib/phusion_passenger/rack/request_handler.rb:92:in `process_request'
+  passenger (2.2.8) lib/phusion_passenger/abstract_request_handler.rb:207:in `main_loop'
+  passenger (2.2.8) lib/phusion_passenger/railz/application_spawner.rb:385:in `start_request_handler'
+  passenger (2.2.8) lib/phusion_passenger/railz/application_spawner.rb:343:in `handle_spawn_application'
+  passenger (2.2.8) lib/phusion_passenger/utils.rb:184:in `safe_fork'
+  passenger (2.2.8) lib/phusion_passenger/railz/application_spawner.rb:341:in `handle_spawn_application'
+  passenger (2.2.8) lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+  passenger (2.2.8) lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+  passenger (2.2.8) lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+  passenger (2.2.8) lib/phusion_passenger/abstract_server.rb:163:in `start'
+  passenger (2.2.8) lib/phusion_passenger/railz/application_spawner.rb:209:in `start'
+  passenger (2.2.8) lib/phusion_passenger/spawn_manager.rb:262:in `spawn_rails_application'
+  passenger (2.2.8) lib/phusion_passenger/abstract_server_collection.rb:126:in `lookup_or_add'
+  passenger (2.2.8) lib/phusion_passenger/spawn_manager.rb:256:in `spawn_rails_application'
+  passenger (2.2.8) lib/phusion_passenger/abstract_server_collection.rb:80:in `synchronize'
+  passenger (2.2.8) lib/phusion_passenger/abstract_server_collection.rb:79:in `synchronize'
+  passenger (2.2.8) lib/phusion_passenger/spawn_manager.rb:255:in `spawn_rails_application'
+  passenger (2.2.8) lib/phusion_passenger/spawn_manager.rb:154:in `spawn_application'
+  passenger (2.2.8) lib/phusion_passenger/spawn_manager.rb:287:in `handle_spawn_application'
+  passenger (2.2.8) lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+  passenger (2.2.8) lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+  passenger (2.2.8) lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+
+Rendering rescues/layout (not_found)
