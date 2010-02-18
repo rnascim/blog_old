@@ -1,10 +1,10 @@
 <h1>Editing cv</h1>
 
-<% debugger %>
-<% @teste = Cvs.find(:all, :conditions => { :id => @cv.id } )%>
-<% debugger %>
+<%# debugger %>
+<%# @cv = Cv.find(:all, :conditions => { :id => @cv.id } )%>
+<%# debugger %>
 
-<% form_for(@cv) do |f| %>
+<% form_for @cv do |f| -%>
   <%= f.error_messages %>
 
   <p>
@@ -17,7 +17,8 @@
   <p>
     <%= f.submit 'Update' %>
   </p>
-<% end %>
+<% end -%>
+
 
 <%= link_to 'Show', @cv %> |
 <%= link_to 'Back', cvs_path %>

@@ -34,7 +34,7 @@ class CvsController < ApplicationController
 
   # GET /cvs/1/edit
   def edit
-    @cv = Cv.find(params[:id])
+    @cv = Cvs.find(params[:id])
   end
 
   # POST /cvs

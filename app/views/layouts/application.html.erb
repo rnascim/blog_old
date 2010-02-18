@@ -9,6 +9,7 @@
   <%= stylesheet_link_tag "style" %>
   <%= auto_discovery_link_tag :atom, formatted_posts_path(:atom) %>
   <%= javascript_include_tag :all %>
+  <style><%= CodeRay::Encoders[:html]::CSS.new(:jerrett).stylesheet %></style>
   <script type="text/javascript" charset="utf-8">
 function inativo(){
 	s  = "© 2010 - Rogério Nascimento\n";

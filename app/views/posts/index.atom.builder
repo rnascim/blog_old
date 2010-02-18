@@ -9,7 +9,7 @@ atom_feed do |feed|
     feed.entry(post) do |entry|
       if post.ativo == '1'
         entry.title(post.assunto)
-        entry.content(post.resumo, :type => 'html')
+        entry.content( parse_coderay(post.resumo), :type => 'html')
         entry.author{ |author| author.name(post.createdby) }
         entry.active(post.ativo)        
       end

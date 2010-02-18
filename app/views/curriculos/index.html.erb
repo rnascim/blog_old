@@ -1,0 +1,22 @@
+<% @curriculos.each do |cv| %>
+<div id="cv-<%= cv.id %>" class="post">
+	<div class="post-top">
+		<div class="post-title">
+			<h2>Rog&eacute;rio Nascimento</h2>
+		</div>
+	</div>
+
+	<div class="entry">
+		<p><%= cv.body %></p>
+	</div>
+	<div class="postmetadata">
+		 <p>
+			<% if logged_in? %>
+				<%= link_to "Editar", edit_curriculo_path(cv) %> |
+			<% end %>
+		    Ult.Atualiza&ccedil;&atilde;o: <%= cv.updated_at%>
+			<input type="hidden" name="id_<%= cv.id %>" value="<%= cv.id %>">
+		 </p>
+	</div>
+</div>
+<% end%>

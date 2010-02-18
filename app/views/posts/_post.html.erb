@@ -8,14 +8,14 @@
 
 	<% if @caller_page == "index" %>
 		<div class="entry">
-			<p><%= post.resumo %></p>
+			<p><%= parse_coderay( post.resumo ) %></p>
 		</div>
 		<div id="read_more">
 			<p><%= link_to "Leia mais...", post , { :title => post.assunto, :rel => "bookmark" } %></p>
 		</div>
 	<% else %>
 		<div class="entry">
-			<p><%= post.texto %></p>
+			<p><%= parse_coderay( post.texto ) %></p>
 		</div>
 	<% end %>
 
