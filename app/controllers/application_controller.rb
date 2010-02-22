@@ -6,6 +6,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery # See ActionController::RequestForgeryProtection for details
 
   before_filter :authenticate, :except => [:index, :show]
+  before_filter :adjust_format_for_iphone
 
 
   # Scrub sensitive parameters from your log
@@ -32,6 +33,12 @@ class ApplicationController < ActionController::Base
     
   def logged_in?
     session[:logged_in] == true
+  end
+
+  def adjust_format_for_iphone
+    # if request.env['HTTP_USER_AGENT'] && request.env['HTTP_USER_AGENT'][/iPhone/]
+    #   request.format = :iphone
+    # end
   end
   
 end

@@ -38,13 +38,14 @@ body{
 	font-size:11px;
 	background:#faf0d7 url(/images/bgr_main.png) repeat-x;
 	color:#000;
+	position: absolute;
 }
 
 #page{
-	width:950px;
+	width:480px;
 	margin:0 auto;
 	padding:0 25px 0 25px;
-	background:url(/images/bgr_page.png) no-repeat;
+	background:url(/images/bgr_page_iphone.png) no-repeat;
 }
 
 /*header_top*/
@@ -54,31 +55,35 @@ body{
 }
 #header_top p{
 	text-align:center;
-	font-size:13px;
+	font-size:8px;
 	color:#544849;
-	padding:8px 45px 0 0;
+	padding:4px 45px 0 0;
 }
 #header_top p a{
 	color:#544849;
 }
-/* HEADER */
 
+
+/* HEADER */
 #header{
 	width:100%;
-	height:148px;
+	height:80px;
 	overflow:hidden;
+	-webkit-box-reflect: direction offset mask-box-image;
+	-webkit-border-radius: 10px;
+	
 }
 
 #header h1{
 	color:#fff;
-	font-size:56px;
+	font-size:30px;
 	font-weight:normal;
 	font-family: serif, "Times New Roman", Times, Georgia;
 	letter-spacing:3px;
-	padding:45px 0 0 0;
+	padding:12px 0 0 0;
 	text-transform:uppercase;
 	float:left;
-	width:750px;
+	width:460px;
 	text-align:center;
 }
 
@@ -89,6 +94,7 @@ body{
 #header h1 a:hover{
 	text-decoration:none;
 }
+
 
 
 #header_twitter{

@@ -12,6 +12,7 @@ class PostsController < ApplicationController
       format.xml  { render :xml  => @posts }
       format.json { render :json => @posts }
       format.atom 
+      format.iphone #index.iphone.erb
     end
   end
 

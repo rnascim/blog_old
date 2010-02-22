@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <title>Rog&eacute;rio on Tech :: SAP, Rails and other technology stuff</title>
+  <%= stylesheet_link_tag "iphone.css" %>
+  <%= javascript_include_tag :defaults, :cache => true %>
+  <style><%= CodeRay::Encoders[:html]::CSS.new(:jerrett).stylesheet %></style>
+  <script type="text/javascript" charset="utf-8">
+function inativo(){
+	s  = "© 2010 - Rogério Nascimento\n";
+	s += "Todos direitos reservados\n\n";
+	s += "Este recurso ainda não foi implementado.\n";
+	s += "Volte em alguns dias, pois com o uso de Ruby on Rails\n";
+	s += "tudo estará pronto de forma muito ágil.\n\n";
+	s += "Para entrar em contato:\n";
+	s += "rnascim@gmail.com";
+	alert(s);
+}
+  </script>
+</head>
+<body>
+<div id="page">
+	<div id="header_top">
+		<p><%= link_to "rogerionascimento.com", root_path %></p>
+	</div>
+	<div id="header">
+		<h1><%= link_to "Rog&eacute;rio Nascimento", root_path %></h1>
+	</div>
+</div>
+</body>
